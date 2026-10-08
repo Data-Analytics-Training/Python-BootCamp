@@ -1,0 +1,13 @@
+[workspace]
+authors = ["Onur DOKER <odoker@msn.com>"]
+channels = ["conda-forge"]
+name = "Python-BootCamp"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.14.*"
+numpy = ">=2.5.3,<3"
+ipykernel = ">=7.4.0,<8"

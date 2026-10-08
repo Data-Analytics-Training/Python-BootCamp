@@ -6,4 +6,4 @@ print("Hello TechIstanbul")
 Multiline comment => If you want to comment multiple lines at once, you can use triple quotes.
 """
 
-print("Pyton BootCamp")
+print("Python BootCamp")
