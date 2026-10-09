@@ -1,10 +1,10 @@
 """
 OPERATORS IN PYTHON
 
-Tools used to perform appropriate data manipulations and calculations for data types are refered to as 'operators' in Python.
+Tools used to perform appropriate data manipulations and calculations for data types are referred to as 'operators' in Python.
 """
 
-# Aritmatical Operators
+# Arithmetical Operators
 print(3 + 4)  # 7
 print(8 - 5)  # 3
 print(8 * 5)  # 40

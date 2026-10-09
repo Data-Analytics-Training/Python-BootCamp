@@ -5,7 +5,7 @@ There is 4 main data types in python:
 1. Integers -> int()
 2. Floats -> float()
 3. Strings -> str()
-3. Bloeans -> bool()
+3. Booleans -> bool()
 
 Determine the data type of a variable we can use the type() function.
 """
@@ -25,7 +25,7 @@ print(type("TechIstanbul"))  # <class 'str'>
 print("""Python Bootcamp""")  # Python Bootcamp
 
 """
-Excape characters in strings:
+Escape characters in strings:
 \' -> ' or
 \" -> " or
 \n -> new line
