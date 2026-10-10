@@ -28,5 +28,3 @@ for number in range(1, 10000):
         sum_ = sum_ + int(dd) ** power
     if sum_ == number:
         print(f"{number} is an Armstrong number")
-else:
-    print(f"{number} is not an Armstrong number")
