@@ -1,15 +1,15 @@
 """
 Conditional Statements
 
-Structures we use to perform conditional opeartions and logic.
+Structures we use to perform conditional operations and logic.
 
 """
 
-name = "Buray"
+name = "Jack"
 
 name = input("What is your name? ")
-if name == "Burak":
+if name == "Jack":
     print("We have same name")
 
-if name != "Burak":
+if name != "Jack":
     print("we don't have same name")

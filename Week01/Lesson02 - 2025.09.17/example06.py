@@ -1,5 +1,5 @@
 road = float(input("Enter the road length in km: "))
-time = float(input("Enter the time taken to travel the road in hours"))
+time = float(input("Enter the time taken to travel the road in hours: "))
 speed = road / time
 
 if speed > 120:

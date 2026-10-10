@@ -10,5 +10,5 @@ print(a + b + c)
 print(a * b * c)
 
 d, e, f = 5, 6, 85
-print(a + b + c)
-print(a * b * c)
+print(d + e + f)
+print(d * e * f)
