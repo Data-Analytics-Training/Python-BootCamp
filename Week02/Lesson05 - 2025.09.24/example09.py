@@ -1,6 +1,6 @@
 foods = {
     "Soups": ["with meat", "with legumes", "with vegetables"],
-    "Kebaps": ["spicy", "w/o spices", "durums"],
+    "Kebabs": ["spicy", "w/o spices", "durums"],
     "Drinks": ["tea", "coffee"],
 }
 
@@ -17,7 +17,7 @@ foods = {
         "with legumes": ["mercimek", "ezogelin"],
         "with vegetables": ["mantar", "brokoli"],
     },
-    "Kebaps": {
+    "Kebabs": {
         "spicy": ["Adana", "Mardin"],
         "w/o spices": ["urfa", "antep"],
         "durums": ["adana durum", "urfa durum"],

@@ -8,7 +8,7 @@ sentence = "Technology is fun and exciting. It helps us learn new things every d
 words = sentence.split()
 for word in words:
     number = len(word)
-    print(f"The word '{word} has {number} characters.")
+    print(f"The word '{word}' has {number} characters.")
 
 # Modern method (by list comprehension)
 sentence = "Technology is fun and exciting. It helps us learn new things every day."
@@ -18,5 +18,5 @@ print(words)
 
 length = [len(word) for word in words]
 
-for word, length in zip(words, length):
-    print(word, length)
+for word, length_ in zip(words, length):
+    print(word, length_)
