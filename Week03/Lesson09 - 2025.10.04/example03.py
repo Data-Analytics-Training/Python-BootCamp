@@ -25,11 +25,11 @@ while in function, defined x value firstly checked in scope of function after th
 x = 300
 
 
-def function():
+def function2():
     x = 500
-    print("inside function", x)  # 500
+    print("inside function2", x)  # 500
 
 
-print("outside function, before function", x)  # 300
-function()
-print("outside function, after function", x)  # 300
+print("outside function, before function2", x)  # 300
+function2()
+print("outside function, after function2", x)  # 300
