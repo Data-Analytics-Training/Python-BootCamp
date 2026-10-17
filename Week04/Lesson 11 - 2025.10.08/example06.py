@@ -9,12 +9,12 @@ What is a Property
 
 # without Property
 class Rectangle:
-  def __init__(self, width, height):
-    self.width = width  # public value
-    self.height = height  # public value
+    def __init__(self, width, height):
+        self.width = width  # public value
+        self.height = height  # public value
 
-  def area(self):
-    return self.width * self.height
+    def area(self):
+        return self.width * self.height
 
 
 calculate_area1 = Rectangle(5, 3)
@@ -24,13 +24,13 @@ print(calculate_area1.area())  # 15
 
 # with Property
 class Rectangle2:
-  def __init__(self, width, height):
-    self.width = width  # public value
-    self.height = height  # public value
+    def __init__(self, width, height):
+        self.width = width  # public value
+        self.height = height  # public value
 
-  @property
-  def area(self):
-    return self.width * self.height
+    @property
+    def area(self):
+        return self.width * self.height
 
 
 calculate_area2 = Rectangle2(5, 3)

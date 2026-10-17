@@ -21,5 +21,5 @@ student1 = Student()
 print(student1.course)  # Python 80-hour Bootcamp
 
 student1.faculty = "Engineering Faculty"
-print(Student.faculty)  #
+print(Student.faculty)  #     (empty line)
 print(student1.faculty)  # Engineering Faculty
