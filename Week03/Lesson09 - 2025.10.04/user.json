@@ -1,11 +1,11 @@
 {
-    "name": "Jack",
-    "age": 25,
-    "city": "New York",
-    "hobbies": [
-        "sport",
-        "music",
-        "traveling"
-    ],
-    "active": true
+  "name": "Jack",
+  "age": 25,
+  "city": "New York",
+  "hobbies": [
+    "sport",
+    "music",
+    "traveling"
+  ],
+  "active": true
 }

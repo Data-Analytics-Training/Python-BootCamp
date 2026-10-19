@@ -1,22 +1,22 @@
 [
-    {
-        "name": "Jack",
-        "age": 22,
-        "department": "Computer Engineering"
-    },
-    {
-        "name": "Jill",
-        "age": 40,
-        "department": "Chemical Engineering"
-    },
-    {
-        "name": "John",
-        "age": 35,
-        "department": "Mechanical Engineering"
-    },
-    {
-        "name": "Jill",
-        "age": 28,
-        "department": "Physics Engineering"
-    }
+  {
+    "name": "Jack",
+    "age": 22,
+    "department": "Computer Engineering"
+  },
+  {
+    "name": "Jill",
+    "age": 40,
+    "department": "Chemical Engineering"
+  },
+  {
+    "name": "John",
+    "age": 35,
+    "department": "Mechanical Engineering"
+  },
+  {
+    "name": "Jill",
+    "age": 28,
+    "department": "Physics Engineering"
+  }
 ]
