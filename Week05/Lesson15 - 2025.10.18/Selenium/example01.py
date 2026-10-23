@@ -60,7 +60,10 @@ from selenium import webdriver
 
 driver = webdriver.Safari()
 
-driver.get("https://www.google.com")
-
-time.sleep(3)
-driver.quit()
+try:
+    driver.get("https://www.google.com")
+    time.sleep(3)
+except Exception as e:
+    print(f"An error occurred: {e}")
+finally:
+    driver.quit()
