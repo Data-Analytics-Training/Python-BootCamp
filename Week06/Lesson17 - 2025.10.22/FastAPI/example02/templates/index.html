@@ -1,0 +1,16 @@
+{% if texts %}
+
+<ul>
+    {% for text in texts %}
+    <li>
+        <h3>{{ text.title }}</h3>
+        <p>{{ text.content }}</p>
+    </li>
+
+    {% endfor %}
+</ul>
+{% else %}
+
+<p>No texts found</p>
+
+{% endif %}

@@ -1,0 +1,22 @@
+<form method="POST">
+    <p>
+        <label>Name: </label>
+        <input type="text" name="name" required/>
+    </p>
+    <p>
+        <label>Surname: </label>
+        <input type="text" name="surname" required/>
+    </p>
+    <button type="submit">Submit</button>
+</form>
+
+<h3>Registered Users ({{ contacts | length }})</h3>
+{% if contacts %}
+<ul>
+    {% for contact in contacts %}
+    <li>{{ contact.name}} - {{ contact.surname }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No one has been added yet</p>
+{% endif %}

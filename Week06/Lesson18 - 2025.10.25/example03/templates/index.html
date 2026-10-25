@@ -5,14 +5,15 @@
     <li class="list-group-item d-flex justify-content-between">
         {{ k.ad }}
         <div>
-            <a href="{{ url_for('kategori_guncelle', id=k.id) }}" class="btn btn-sm btn-warning"
-                >Güncelle</a
+            <a href="{{ url_for('kategori_guncelle', id=k.id) }}"
+               class="btn btn-sm btn-warning"
+            >Güncelle</a
             >
             <a
-                href="{{ url_for('kategori_sil', id=k.id) }}"
-                class="btn btn-sm btn-danger"
-                onclick="return confirm('Silmek istediğinize emin misiniz?');"
-                >Sil</a
+                    href="{{ url_for('kategori_sil', id=k.id) }}"
+                    class="btn btn-sm btn-danger"
+                    onclick="return confirm('Silmek istediğinize emin misiniz?');"
+            >Sil</a
             >
         </div>
     </li>
@@ -24,36 +25,37 @@
 <h2>Kitaplar</h2>
 <table class="table table-striped">
     <thead>
-        <tr>
-            <th>Başlık</th>
-            <th>Yazar</th>
-            <th>Kategori</th>
-            <th>İşlemler</th>
-        </tr>
+    <tr>
+        <th>Başlık</th>
+        <th>Yazar</th>
+        <th>Kategori</th>
+        <th>İşlemler</th>
+    </tr>
     </thead>
     <tbody>
-        {% for k in kitaplar %}
-        <tr>
-            <td>{{ k.baslik }}</td>
-            <td>{{ k.yazar }}</td>
-            <td>{{ k.kategori.ad if k.kategori else 'Silinmiş Kategori' }}</td>
-            <td>
-                <a href="{{ url_for('kitap_guncelle', id=k.id) }}" class="btn btn-sm btn-warning"
-                    >Güncelle</a
-                >
-                <a
+    {% for k in kitaplar %}
+    <tr>
+        <td>{{ k.baslik }}</td>
+        <td>{{ k.yazar }}</td>
+        <td>{{ k.kategori.ad if k.kategori else 'Silinmiş Kategori' }}</td>
+        <td>
+            <a href="{{ url_for('kitap_guncelle', id=k.id) }}"
+               class="btn btn-sm btn-warning"
+            >Güncelle</a
+            >
+            <a
                     href="{{ url_for('kitap_sil', id=k.id) }}"
                     class="btn btn-sm btn-danger"
                     onclick="return confirm('Silmek istediğinize emin misiniz?');"
-                    >Sil</a
-                >
-            </td>
-        </tr>
-        {% else %}
-        <tr>
-            <td colspan="4">Henüz kitap yok.</td>
-        </tr>
-        {% endfor %}
+            >Sil</a
+            >
+        </td>
+    </tr>
+    {% else %}
+    <tr>
+        <td colspan="4">Henüz kitap yok.</td>
+    </tr>
+    {% endfor %}
     </tbody>
 </table>
 {% endblock %}

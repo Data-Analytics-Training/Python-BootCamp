@@ -1,4 +1,4 @@
-# app.py
+# main.py
 from flask import Flask, render_template, request, redirect, url_for, flash
 from models import db, Kategori, Kitap
 import os

@@ -1,46 +1,46 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>{{ user.name | title }} {{ user.surname | title }} - Update Page</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/update.css') }}" />
-    </head>
-    <body>
-        <h2>{{ user.name | title }} {{ user.surname | title }} — Update Page</h2>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{{ user.name | title }} {{ user.surname | title }} - Update Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/update.css') }}"/>
+</head>
+<body>
+<h2>{{ user.name | title }} {{ user.surname | title }} — Update Page</h2>
 
-        <div class="form-box">
-            <form method="POST" enctype="multipart/form-data">
-                <p>
-                    <label>Name:</label><br />
-                    <input type="text" name="name" value="{{ user.name }}" required />
-                </p>
-                <p>
-                    <label>Surname:</label><br />
-                    <input type="text" name="surname" value="{{ user.surname }}" required />
-                </p>
+<div class="form-box">
+    <form method="POST" enctype="multipart/form-data">
+        <p>
+            <label>Name:</label><br/>
+            <input type="text" name="name" value="{{ user.name }}" required/>
+        </p>
+        <p>
+            <label>Surname:</label><br/>
+            <input type="text" name="surname" value="{{ user.surname }}" required/>
+        </p>
 
-                <!-- Show current picture -->
-                <div class="current_picture">
-                    {% if user.picture %}
-                    <p>Current Picture:</p>
-                    <img
-                        src="{{ url_for('static', filename='uploads/' + user.picture) }}"
-                        alt="Current"
-                    />
-                    {% else %}
-                    <p>No picture.</p>
-                    {% endif %}
-                </div>
-
-                <p>
-                    <label>New Image (if you want to change it):</label><br />
-                    <input type="file" name="picture" accept="image/*" />
-                </p>
-
-                <button type="submit">Update</button>
-            </form>
+        <!-- Show current picture -->
+        <div class="current_picture">
+            {% if user.picture %}
+            <p>Current Picture:</p>
+            <img
+                    src="{{ url_for('static', filename='uploads/' + user.picture) }}"
+                    alt="Current"
+            />
+            {% else %}
+            <p>No picture.</p>
+            {% endif %}
         </div>
 
-        <a href="{{ url_for('index') }}" class="back">← To main page</a>
-    </body>
+        <p>
+            <label>New Image (if you want to change it):</label><br/>
+            <input type="file" name="picture" accept="image/*"/>
+        </p>
+
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+<a href="{{ url_for('index') }}" class="back">← To main page</a>
+</body>
 </html>

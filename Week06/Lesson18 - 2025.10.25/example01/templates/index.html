@@ -1,72 +1,73 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>User List</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
-    </head>
-    <body>
-        <h1>User List</h1>
+<head>
+    <meta charset="UTF-8"/>
+    <title>User List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"/>
+</head>
+<body>
+<h1>User List</h1>
 
-        <div class="form-container">
-            <h3>Add New User</h3>
-            <form action="{{ url_for('add') }}" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required />
-                </div>
-                <div class="form-group">
-                    <label for="surname">Surname:</label>
-                    <input type="text" id="surname" name="surname" required />
-                </div>
-                <div class="form-group">
-                    <label for="picture">Picture:</label>
-                    <input type="file" id="picture" name="picture" accept="image/*" />
-                </div>
-                <div class="form-group" style="min-width: auto">
-                    <button type="submit" class="btn-add">Submit</button>
-                </div>
-            </form>
+<div class="form-container">
+    <h3>Add New User</h3>
+    <form action="{{ url_for('add') }}" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required/>
         </div>
-
-        {% if users %} {% for user in users %}
-        <div class="user-card">
-            {% if user.picture %}
-            <img
-                src="{{ url_for('static', filename='uploads/' + user.picture) }}"
-                alt="{{ user.name }} {{ user.surname }}"
-                class="user-img"
-            />
-            {% else %}
-            <div class="placeholder-img">
-                <svg width="80" height="80" viewBox="0 0 24 24" fill="#dee2e6">
-                    <circle cx="12" cy="12" r="10" />
-                </svg>
-            </div>
-            {% endif %}
-
-            <div class="user-info">
-                <h3>{{ user.name }} {{ user.surname }}</h3>
-                <p><strong>ID:</strong> {{ user.id }}</p>
-                <p><strong>Picture:</strong> {{ user.picture or "No Picture" }}</p>
-            </div>
-
-            <div class="actions">
-                <a href="{{ url_for('user_info', user_id=user.id) }}" class="btn-view"> Info </a>
-                <a href="{{ url_for('update', user_id=user.id) }}" class="btn-edit"> Update </a>
-                <a
-                    href="{{ url_for('delete', user_id=user.id) }}"
-                    class="btn-delete"
-                    onclick="return confirm('Are you sure you want to delete the user {{ user.name }} {{ user.surname }} ?')"
-                >
-                    Delete
-                </a>
-            </div>
+        <div class="form-group">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required/>
         </div>
-        {% endfor %} {% else %}
-        <p class="no-users">
-            No users have been added yet. You can add a user using the form above.
-        </p>
-        {% endif %}
-    </body>
+        <div class="form-group">
+            <label for="picture">Picture:</label>
+            <input type="file" id="picture" name="picture" accept="image/*"/>
+        </div>
+        <div class="form-group" style="min-width: auto">
+            <button type="submit" class="btn-add">Submit</button>
+        </div>
+    </form>
+</div>
+
+{% if users %} {% for user in users %}
+<div class="user-card">
+    {% if user.picture %}
+    <img
+            src="{{ url_for('static', filename='uploads/' + user.picture) }}"
+            alt="{{ user.name }} {{ user.surname }}"
+            class="user-img"
+    />
+    {% else %}
+    <div class="placeholder-img">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="#dee2e6">
+            <circle cx="12" cy="12" r="10"/>
+        </svg>
+    </div>
+    {% endif %}
+
+    <div class="user-info">
+        <h3>{{ user.name }} {{ user.surname }}</h3>
+        <p><strong>ID:</strong> {{ user.id }}</p>
+        <p><strong>Picture:</strong> {{ user.picture or "No Picture" }}</p>
+    </div>
+
+    <div class="actions">
+        <a href="{{ url_for('user_info', user_id=user.id) }}" class="btn-view">
+            Info </a>
+        <a href="{{ url_for('update', user_id=user.id) }}" class="btn-edit"> Update </a>
+        <a
+                href="{{ url_for('delete', user_id=user.id) }}"
+                class="btn-delete"
+                onclick="return confirm('Are you sure you want to delete the user {{ user.name }} {{ user.surname }} ?')"
+        >
+            Delete
+        </a>
+    </div>
+</div>
+{% endfor %} {% else %}
+<p class="no-users">
+    No users have been added yet. You can add a user using the form above.
+</p>
+{% endif %}
+</body>
 </html>

@@ -1,25 +1,25 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>{{ user.name }} {{ user.surname }} - Detail</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}" />
-    </head>
-    <body>
-        <h1>{{ user.name | title }} {{ user.surname | title }}</h1>
-        {% if user.picture %}
-        <img
-            src="{{ url_for('static', filename='uploads/' + user.picture) }}"
-            class="picture"
-            alt="Profile"
-        />
-        {% else %}
-        <div class="placeholder">?</div>
-        {% endif %}
+<head>
+    <meta charset="UTF-8"/>
+    <title>{{ user.name }} {{ user.surname }} - Detail</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}"/>
+</head>
+<body>
+<h1>{{ user.name | title }} {{ user.surname | title }}</h1>
+{% if user.picture %}
+<img
+        src="{{ url_for('static', filename='uploads/' + user.picture) }}"
+        class="picture"
+        alt="Profile"
+/>
+{% else %}
+<div class="placeholder">?</div>
+{% endif %}
 
-        <p><strong>ID:</strong> {{ user.id }}</p>
-        <p><strong>Picture:</strong> {{ user.picture or "No Picture" }}</p>
+<p><strong>ID:</strong> {{ user.id }}</p>
+<p><strong>Picture:</strong> {{ user.picture or "No Picture" }}</p>
 
-        <a href="{{ url_for('index') }}">← To main page</a>
-    </body>
+<a href="{{ url_for('index') }}">← To main page</a>
+</body>
 </html>

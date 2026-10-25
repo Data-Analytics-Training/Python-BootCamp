@@ -1,12 +1,12 @@
 [
-    {
-        "id": 1,
-        "name": "John Doe",
-        "email": "johndoe@example.com"
-    },
-    {
-        "id": 2,
-        "name": "Jack Black Tomorrow",
-        "email": "jackblack@example.com"
-    }
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "johndoe@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Jack Black Tomorrow",
+    "email": "jackblack@example.com"
+  }
 ]

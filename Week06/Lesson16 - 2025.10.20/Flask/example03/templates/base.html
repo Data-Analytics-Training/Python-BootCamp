@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Web Elements {% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+<header>
+    <h1>
+        {% block header %}
+        Welcome to TechIstanbul 80-hour Python BootCamp Course
+        {% endblock %}
+    </h1>
+</header>
+
+<main>
+    {% block content %}
+    Display area on web page
+    {% endblock %}
+
+</main>
+
+
+</body>
+</html>
