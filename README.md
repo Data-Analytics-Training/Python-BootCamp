@@ -1,207 +1,224 @@
 # Python Bootcamp
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.14+](https://img.shields.io/badge/python-3.14+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A comprehensive 8-week Python bootcamp program covering programming fundamentals to advanced data science and web development. This repository contains hands-on examples, practice exercises, and project files.
+An eight-week, hands-on bootcamp repository that takes learners from Python syntax
+fundamentals through web development, data processing, and visualization. This is
+not a single application; it contains standalone lesson examples, Jupyter notebooks,
+practice exercises, and sample data files.
 
 ## Overview
 
-This bootcamp is designed for learners progressing from beginner to intermediate Python skills. Each week builds upon previous concepts, culminating in full-stack web applications and data analysis projects.
+- **Duration:** 8 weeks, 24 lessons/sections
+- **Target audience:** Python beginners and learners strengthening their fundamentals
+- **Python:** `>=3.14` (pinned by `.python-version`)
+- **Educational content:** 295 Python examples and 13 Jupyter notebooks
+- **Package management:** `uv` and `uv.lock`
+- **License:** MIT
 
-```
-Total Duration: 8 Weeks
-Target Audience: Beginners to Intermediate Learners
-Prerequisites: Basic computer literacy
-Total Examples: 218 Python files + 10 Jupyter Notebooks
-```
+## Curriculum
 
-## Curriculum Structure
+| Week | Content | Main tools | Content count |
+|---|---|---|---:|
+| **01** | Python fundamentals: syntax, variables, types, input, and conditionals | Python standard library | 59 Python files |
+| **02** | Control flow, lists, loops, functions, strings, and errors | Python standard library | 67 Python files |
+| **03** | File operations, text, JSON, and CSV | `json`, `csv`, `datetime`, `os` | 45 Python files |
+| **04** | Databases and ORM | SQLite, SQLAlchemy, DuckDB | 55 Python files |
+| **05** | HTTP clients and web scraping | Requests, HTTPX, BeautifulSoup, Selenium, Playwright | 40 Python files |
+| **06** | Web applications and APIs | Flask, FastAPI, Jinja2, Uvicorn | 21 Python files |
+| **07** | NumPy and array operations | NumPy, Jupyter | 3 notebooks |
+| **08** | Data frames and visualization | Pandas, Polars, Matplotlib, Plotly, Seaborn | 6 notebooks |
 
-| Week | Topic | Key Technologies | Lessons | Examples |
-|------|-------|-----------------|---------|----------|
-| **Week 01** | Python Fundamentals | Variables, Data Types, Conditionals | 3 | 59 |
-| **Week 02** | Control Flow & Functions | Loops, Functions, Error Handling | 3 | 67 |
-| **Week 03** | File Operations | File I/O, JSON, CSV Processing | 3 | 45 |
-| **Week 04** | Database Management | SQLite, SQL Queries, ORM | 3 | 52 |
-| **Week 05** | Web Scraping | Requests, BeautifulSoup, Selenium | 3 | 25 |
-| **Week 06** | Web Development | Flask, Templates, Forms | 3 | 14 |
-| **Week 07** | Data Analysis | Pandas, Matplotlib, Jupyter | 3 | 3 notebooks |
-| **Week 08** | Scientific Computing | NumPy, Seaborn, Visualization | 3 | 4 notebooks |
+The `Practice/` directory also contains 8 Python exercises and 4 interactive
+notebooks. File counts refer to educational content; the package skeleton under
+`src/python_bootcamp/` is not included.
 
-## Repository Structure
+## Directory Structure
 
-```
+```text
 Python-BootCamp/
-├── Week01/          # Python Fundamentals (2025.09.15 - 2025.09.20)
-│   ├── Lesson01 - 2025.09.15/  # Introduction, print(), comments
-│   ├── Lesson02 - 2025.09.17/  # Variables, type conversion, input()
-│   └── Lesson03 - 2025.09.20/  # Conditional statements
-├── Week02/          # Control Flow & Functions (2025.09.22 - 2025.09.27)
-│   ├── Lesson04 - 2025.09.22/  # Lists, loops
-│   ├── Lesson05 - 2025.09.24/  # Functions, parameters
-│   └── Lesson06 - 2025.09.27/  # Strings, exception handling
-├── Week03/          # File Operations (2025.09.29 - 2025.10.04)
-│   ├── Lesson07 - 2025.09.29/  # File I/O operations
-│   ├── Lesson08 - 2025.10.01/  # File handling continued
-│   └── Lesson09 - 2025.10.04/  # JSON and CSV processing
-├── Week04/          # Database Management (2025.10.06 - 2025.10.11)
-│   ├── Lesson10 - 2025.10.06/  # SQLite fundamentals
-│   ├── Lesson11 - 2025.10.08/  # SQL queries (SELECT, INSERT, UPDATE, DELETE)
-│   └── Lesson12 - 2025.10.11/  # Object-Relational Mapping (ORM)
-├── Week05/          # Web Scraping (2025.10.13 - 2025.10.18)
-│   ├── Lesson13 - 2025.10.13/  # HTTP requests, REST APIs
-│   ├── Lesson14 - 2025.10.15/  # BeautifulSoup data extraction
-│   └── Lesson15 - 2025.10.18/  # Selenium browser automation
-├── Week06/          # Flask Web Development (2025.10.20 - 2025.10.25)
-│   ├── Lesson16 - 2025.10.20/  # Flask routing, templates
-│   ├── Lesson17 - 2025.10.22/  # Forms, POST/GET methods
-│   └── Lesson18 - 2025.10.25/  # Database integration
-├── Week07/          # Data Analysis (2025.10.27 - 2025.10.29)
-│   ├── Lesson19 - 2025.10.27/  # Pandas data manipulation
-│   ├── Lesson20 - 2025.10.29/  # Matplotlib visualizations
-│   └── Lesson21 - 2025.11.01/  # Seaborn statistical plots
-└── Week08/          # Scientific Computing (2025.11.03 - 2025.11.08)
-    ├── Lesson22 - 2025.11.03/  # NumPy array operations
-    ├── Lesson23 - 2025.11.05/  # Advanced data visualization
-    └── Section24 - 2025.11.08/  # Comprehensive analysis project
-└── Practice/        # Weekly practice questions & notebooks
-    ├── Section05-Q1.py through Q11.py
-    ├── Section06-Q1.py, Q4.py
-    └── Section01-04.ipynb  # Interactive coding exercises
+├── Week01/                         # Python fundamentals
+├── Week02/                         # Control flow and functions
+├── Week03/                         # File, JSON, and CSV operations
+├── Week04/                         # SQLite, SQLAlchemy, and DuckDB
+├── Week05/                         # HTTP, scraping, and browser automation
+├── Week06/                         # Flask and FastAPI examples
+├── Week07/                         # NumPy notebooks
+├── Week08/                         # Pandas, Polars, and visualization
+├── Practice/                       # Exercises and notebooks
+├── src/python_bootcamp/            # Package entry-point skeleton
+├── pyproject.toml                  # Project and dependency definitions
+├── uv.lock                         # Locked dependency versions
+└── LICENSE
 ```
 
-## Prerequisites
-
-- Python 3.10 or higher
-- Git (for cloning the repository)
-- Virtual environment tool (`venv` or `conda`)
-
-Recommended: Basic familiarity with command line operations
+The week directories contain lesson folders with their original date-based names.
+For example, `Week05/Lesson14 - 2025.10.15/` contains HTTPX and BeautifulSoup
+examples, while `Week06/Lesson18 - 2025.10.25/` contains Flask, database, and API
+examples.
 
 ## Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/ecodation/Python-BootCamp.git
-   cd Python-BootCamp
-   ```
+### Recommended: uv
 
-2. **Create and activate virtual environment**
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate    # macOS/Linux
-   # or
-   .venv\Scripts\activate       # Windows
-   ```
+If [uv](https://docs.astral.sh/uv/) is not installed, follow the installation
+instructions for your operating system in the official documentation. Then run:
 
-3. **Install dependencies**
-   ```bash
-   pip install flask jupyter pandas matplotlib seaborn numpy requests beautifulsoup4 selenium
-   ```
+```bash
+git clone https://github.com/onurdoker/Python-BootCamp.git
+cd Python-BootCamp
+
+# Creates a virtual environment and installs the locked dependencies with Python 3.14
+uv sync
+```
+
+`uv sync` installs the runtime and development dependencies defined in
+`pyproject.toml`. Activating the environment is not required; commands can be
+run directly with `uv run`.
+
+### Alternative: venv + pip
+
+```bash
+python3.14 -m venv .venv
+source .venv/bin/activate          # macOS/Linux
+# Windows:
+# .venv\Scripts\activate
+
+python -m pip install --upgrade pip
+python -m pip install -e .
+python -m pip install jupyterlab pytest ruff
+```
+
+The `example02` and `example03` applications under `Week06/Lesson18` use
+Flask-SQLAlchemy. This dependency is not currently listed in the project
+manifest, so install it separately before running those examples:
+
+```bash
+uv pip install flask-sqlalchemy
+# or, inside an active virtual environment:
+python -m pip install flask-sqlalchemy
+```
 
 ## Quick Start
 
-### Run Python Examples
+### Run a Python example
+
+Examples are run as standalone files:
 
 ```bash
-# Run any example file
-python Week01/Lesson01\ -\ 2025.09.15/example01.py
+uv run python "Week01/Lesson01 - 2025.09.15/example01.py"
+uv run python "Week05/Lesson14 - 2025.10.15/httpx/example02.py"
 ```
 
-### Launch Jupyter Notebooks
+If you are not using `uv`, replace `uv run python` with `python` while the virtual
+environment is active.
+
+### Package entry point
+
+The project also defines a `python-bootcamp` command:
 
 ```bash
-jupyter notebook Practice/
-# or
-jupyter notebook Week07/Lesson19\ -\ 2025.10.27/lesson.ipynb
+uv run python-bootcamp
 ```
 
-## Week-by-Week Content
+At present, this command only prints a greeting to verify that the package skeleton
+is working; it does not launch a particular lesson or web application.
 
-### Week 01: Python Fundamentals
-- Basic syntax and `print()` function
-- Comments and code documentation
-- Variables, data types, and type conversion
-- User input handling
-- Conditional statements and logical operators
+### Start Jupyter
 
-### Week 02: Control Flow & Functions
-- Lists, tuples, and dictionaries
-- For and while loops
-- Function definitions and parameters
-- String methods and manipulation
-- Exception handling with try/except
+```bash
+uv run jupyter lab
+```
 
-### Week 03: File Operations
-- Reading and writing files
-- File handling best practices
-- JSON data processing
-- CSV file operations
+Then open a notebook under `Practice/`, `Week07/`, or `Week08/`. To open only the
+Practice directory:
 
-### Week 04: Database Management
-- SQLite database operations
-- SQL queries (SELECT, INSERT, UPDATE, DELETE)
-- Object-Relational Mapping (ORM) concepts
+```bash
+uv run jupyter lab Practice/
+```
 
-### Week 05: Web Scraping
-- HTTP requests and REST APIs
-- BeautifulSoup HTML parsing
-- Selenium browser automation
+### Run Flask and FastAPI examples
 
-### Week 06: Flask Web Development
-- Flask application setup
-- Route decorators and URL parameters
-- Template rendering
-- Form handling (GET/POST)
-- Database integration
+Each application should be started from its own lesson directory. For example:
 
-### Week 07: Data Analysis
-- Pandas DataFrame operations
-- Matplotlib data visualization
-- Seaborn statistical plots
+```bash
+cd "Week06/Lesson16 - 2025.10.20/Flask/example01"
+uv run python app.py
+```
 
-### Week 08: Scientific Computing
-- NumPy array operations
-- Advanced visualization techniques
-- Data analysis projects
+The port used by FastAPI examples varies; check the `uvicorn.run(...)` line in the
+file. Flask examples usually use port `5000`, while FastAPI examples commonly use
+port `5001` or `8000`. These lesson examples are educational and generally run in
+debug mode; they should not be used in production.
 
-## Practice Exercises
+### Playwright and Selenium
+
+Install the Playwright browser binaries before running Playwright examples:
+
+```bash
+uv run playwright install
+```
+
+Selenium examples require a local browser and a compatible WebDriver. Some examples
+use `webdriver-manager`, while others use the local `chromedriver` file in the
+lesson directory. Behavior may vary depending on the operating system, browser
+version, and file permissions.
+
+## External Services and Safe Usage
+
+Some web scraping and API examples connect to publicly accessible services on the
+internet. Results may change because of network availability, changes to a remote
+site's HTML, rate limits, or service changes.
+
+- Respect each site's terms of service and `robots.txt` rules.
+- Use reasonable request intervals and do not attempt to collect authenticated
+  content without permission.
+- Treat hard-coded passwords, secrets, and local network addresses in lessons as
+  demo data only; never use them in real projects.
+- Some requests under `Week06/Lesson18 - 2025.10.25/example04/api_request_files/`
+  target the local address `192.168.1.12` and will not work unchanged in most
+  environments.
+
+## Practice Content
 
 The `Practice/` directory contains:
-- **Section 05**: Functions and string manipulation exercises (Q1-Q11)
-- **Section 06**: Data structures and algorithms exercises (Q1, Q4)
-- **Interactive notebooks**: Hands-on coding exercises with solutions (Section01-04)
 
-## Troubleshooting
+- `Section01.ipynb` - `Section04.ipynb`: fundamentals and interactive exercises
+- `Section05-Q*.py`: function, string, and problem-solving exercises
+- `Section06-Q*.py`: data structure and algorithm exercises
 
-| Issue | Solution |
-|-------|----------|
-| `ModuleNotFoundError` | Run `pip install flask jupyter pandas matplotlib seaborn numpy requests beautifulsoup4 selenium` |
-| Flask app not loading | Check virtual environment is activated |
-| Jupyter kernel issues | Run `python -m ipykernel install --user --name=.venv` |
+Some historical naming differences remain in the filenames; for example,
+`Section5-Q4.py` does not follow the `Section05-Q4.py` format.
+
+## Testing and Code Quality
+
+`pytest` and `ruff` are defined as development dependencies, but the project
+currently has no separate test directory or automated CI configuration. Run the
+basic checks with:
+
+```bash
+uv run pytest
+uv run ruff check .
+```
+
+Because there are currently no test files, `pytest` may complete without collecting
+tests. Validate notebooks and live web examples by running the relevant notebook or
+example directly.
 
 ## Contributing
 
-This is an educational repository. Feel free to:
-- Submit pull requests for improvements
-- Report issues with code examples
-- Suggest additional practice problems
+Pull requests are welcome for improving educational examples, correcting explanations,
+or adding new practice exercises. When adding an example:
+
+1. Follow the naming style used by the relevant week and lesson directory.
+2. Document external services or special system requirements clearly.
+3. Update the run instructions and required dependencies.
 
 ## License
 
-This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
-
-## Acknowledgments
-
-- TechIstanbul for curriculum design
-- Ecodation for training partnership
-- All contributors and students who helped improve this material
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-<div align="center">
-
-**Happy Coding! 🐍**
-
-</div>
+Happy coding! 🐍
